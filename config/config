@@ -4,7 +4,7 @@
 # Layout
 
 # font for window. (font name/font size)
-font Ubuntu Bold 10
+font Montserrat 10
 
 # configure layout desktop. (default/stacking/tabbed)
 workspace_layout default
@@ -59,10 +59,12 @@ bindsym $mod+F1 exec firefox
 # file manager
 bindsym $mod+F2 exec pcmanfm
 
-# printscreen
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print exec --no-startup-id i3-scrot -s
+# printscreen (fullscreen/selection)
+# take a full-screen
+bindsym Print exec --no-startup-id i3-scrot --desk
+# take a full-screen after delay (s/m/h/d)
+bindsym Shift+Print exec --no-startup-id sleep 3s && i3-scrot --desk
+#bindsym Ctrl+Print exec --no-startup-id i3-scrot --select
 
 # help
 bindsym $mod+Shift+h exec terminal -e 'man i3'
@@ -133,7 +135,8 @@ set $ws8 8
 
 # APPLICATIONS (INITIALIZATION)
 # wallpaper provider
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+#exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec_always --no-startup-id feh --conversion-timeout 1 --bg-fill ~/Imagens/Backgrounds/default.*
 
 # gnome authentication
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
