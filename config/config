@@ -59,12 +59,14 @@ bindsym $mod+F1 exec firefox
 # file manager
 bindsym $mod+F2 exec pcmanfm
 
-# printscreen (fullscreen/selection)
+# file viewer
+bindsym $mod+F3 exec terminal -e 'ranger'
+
+# printscreen (fullscreen/crop)
 # take a full-screen
 bindsym Print exec --no-startup-id i3-scrot --desk
-# take a full-screen after delay (s/m/h/d)
 bindsym Shift+Print exec --no-startup-id sleep 3s && i3-scrot --desk
-#bindsym Ctrl+Print exec --no-startup-id i3-scrot --select
+bindsym Ctrl+Print --release exec --no-startup-id i3-scrot --select
 
 # help
 bindsym $mod+Shift+h exec terminal -e 'man i3'
@@ -116,11 +118,12 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 # APPLICATIONS (CONFIG)
 # open file manager only in workspace 1 (class/title)
-#assign [class=Pcmanfm] $ws1
+assign [class=SimpleScreenRecorder] $ws8
 
 
 # open specific application in floating mode (class/title)
 for_window [class=Manjaro-hello] floating enable
+for_window [class=SimpleScreenRecorder] floating enable
 
 # workspace names
 set $ws1 1
@@ -135,7 +138,6 @@ set $ws8 8
 
 # APPLICATIONS (INITIALIZATION)
 # wallpaper provider
-#exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 exec_always --no-startup-id feh --conversion-timeout 1 --bg-fill ~/Imagens/Backgrounds/default.*
 
 # gnome authentication
@@ -151,8 +153,8 @@ exec --no-startup-id xfce4-power-manager
 # app store
 exec --no-startup-id pamac-tray
 
-# copy history
-exec --no-startup-id clipit
+# network manager
+exec_always --no-startup-id nm-applet
 
 # enable automatic screen look
 exec --no-startup-id xautolock -time 10 -locker blurlock
