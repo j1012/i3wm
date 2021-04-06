@@ -1,0 +1,162 @@
+# I3 SETTINGS: (1.0)
+# http://i3wm.org/docs/userguide.html
+
+# Layout
+
+# font for window. (font name/font size)
+font Ubuntu Bold 10
+
+# configure layout desktop. (default/stacking/tabbed)
+workspace_layout default
+
+# configure border style. (normal/pixel/none)
+default_border pixel 1
+default_floating_border normal
+
+# hide borders
+hide_edge_borders none
+
+# smart gaps (??)
+smart_gaps on
+smart_borders on
+
+gaps inner 10
+gaps outer -2
+
+
+# Keyboard
+
+# configure mod key. (Mod1=<Alt>, Mod4=<Super>)
+set $mod Mod4
+
+# change borders
+#bindsym $mod+u border none
+#bindsym $mod+y border pixel 1
+#bindsym $mod+n border normal
+
+# start a konsole
+bindsym $mod+Return exec terminal
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# reload i3
+bindsym $mod+Shift+c reload
+
+# close i3
+bindsym $mod+Shift+r restart
+
+# enable/disable mode fullscreen.
+bindsym $mod+f fullscreen toggle
+
+# start app launcher
+#bindsym $mod+d exec --no-startup-id dmenu_recency
+bindsym $mod+d exec --no-startup-id rofi -show drun  -show-icons
+
+# browser
+bindsym $mod+F1 exec firefox
+
+# file manager
+bindsym $mod+F2 exec pcmanfm
+
+# printscreen
+bindsym Print exec --no-startup-id i3-scrot
+bindsym $mod+Print exec --no-startup-id i3-scrot -w
+bindsym $mod+Shift+Print exec --no-startup-id i3-scrot -s
+
+# help
+bindsym $mod+Shift+h exec terminal -e 'man i3'
+
+# change focus window
+bindsym $mod+Up focus up
+bindsym $mod+Left focus left
+bindsym $mod+Right focus Right
+bindsym $mod+Down focus down
+
+# move focused window
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Down move down
+
+# change orientation
+bindsym $mod+h split h
+bindsym $mod+v split v
+#bindsym $mod+q split toggle
+
+# navigation workspaces (next/previous)
+bindsym $mod+Ctrl+Left workspace prev,
+bindsym $mod+Ctrl+Right workspace next
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+
+# move focused window to workspace
+bindsym $mod+Ctrl+1 move container to workspace $ws1
+bindsym $mod+Ctrl+2 move container to workspace $ws2
+bindsym $mod+Ctrl+3 move container to workspace $ws3
+bindsym $mod+Ctrl+4 move container to workspace $ws4
+bindsym $mod+Ctrl+5 move container to workspace $ws5
+bindsym $mod+Ctrl+6 move container to workspace $ws6
+bindsym $mod+Ctrl+7 move container to workspace $ws7
+bindsym $mod+Ctrl+8 move container to workspace $ws8
+
+# look screen
+bindsym $mod+9 exec --no-startup-id blurlock
+
+
+# APPLICATIONS (CONFIG)
+# open file manager only in workspace 1 (class/title)
+#assign [class=Pcmanfm] $ws1
+
+
+# open specific application in floating mode (class/title)
+for_window [class=Manjaro-hello] floating enable
+
+# workspace names
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+
+
+# APPLICATIONS (INITIALIZATION)
+# wallpaper provider
+exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+
+# gnome authentication
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# manjaro welcome
+#exec --no-startup-id manjaro-hello
+#exec --no-startup-id start_conky_maia
+
+# power manager
+exec --no-startup-id xfce4-power-manager
+
+# app store
+exec --no-startup-id pamac-tray
+
+# copy history
+exec --no-startup-id clipit
+
+# enable automatic screen look
+exec --no-startup-id xautolock -time 10 -locker blurlock
+
+# support theme
+exec_always --no-startup-id ff-theme-util
+exec_always --no-startup-id fix-xcursor
+
+# polybar
+exec_always --no-startup-id /usr/local/share/polybar/launch.sh
