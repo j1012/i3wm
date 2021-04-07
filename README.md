@@ -47,11 +47,20 @@ Comportamento de teclas: (Pseudonimos)
 - Simplescreenrecorder por padrão é direcionado a área de trabalho 8.
 
 ## Dependencias
-> Redshift: `sudo pacman -S redshift geoclue pyxdg` <br>
-> Gerenciador de Bateria: `sudo pacman -S xfce4-power-manager` <br>
-> Gerenciador de conexões de rede: `sudo pacman -S nm-applet` <br>
-> Notificações de atualização: `sudo pacman -S pacman-tray` <br>
-> Provedor do bloqueio de tela: `sudo pacman -S xautolock` <br>
+> Redshift: <br>
+> `sudo pacman -S redshift geoclue pyxdg` <br>
+> Gerenciador de Bateria: <br>
+> `sudo pacman -S xfce4-power-manager` <br>
+> Gerenciador de conexões de rede: <br>
+> `sudo pacman -S nm-applet` <br>
+> Notificações de atualização: <br>
+> `sudo pacman -S pacman-tray` <br>
+> Provedor do bloqueio de tela: <br>
+> `sudo pacman -S xautolock` <br>
+> Provedor de Imagem de fundo: <br>
+> `sudo pacman -S feh` <br>
+> Provedor de menu: <br>
+> `sudo pacman -S rofi` <br>
 
 ## Instalação
 Em breve detalhes...
