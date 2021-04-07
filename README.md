@@ -68,6 +68,7 @@ Comportamento de teclas: (Pseudonimos)
 > Provedor de menu: <br>
 > `sudo pacman -S rofi` <br>
 
+### Possíveis dúvidas
 <details>
   <summary>Como resolver a falha na inicialização do Redshift?</summary>
   <p>Você pode optar pelas configurações manuais através do arquivo <strong>redshift.conf</strong> que deverá ser criado em <code>~/.config/</code> contendo as seguintes informações:</p>
