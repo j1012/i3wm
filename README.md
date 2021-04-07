@@ -68,15 +68,23 @@ Comportamento de teclas: (Pseudonimos)
 > Provedor de menu: <br>
 > `sudo pacman -S rofi` <br>
 
-### Correção: Falha na inicialização do Redshift
-Você pode optar pelas configurações manuais através do arquivo **redshift.conf** que deverá ser criado em `~/.config/` contendo as seguintes informações:
-> [redshift] <br>
-> location-provider=manual <br>
-> [manual] <br>
-> lat=32.7 <br>
-> lon=-117.2 <br>
+<details>
+  <summary>Como resolver a falha na inicialização do Redshift?</summary>
+  <p>Você pode optar pelas configurações manuais através do arquivo <strong>redshift.conf</strong> que deverá ser criado em <code>~/.config/</code> contendo as seguintes informações:</p>
 
-Para mais informações, acesse esse [link](http://jonls.dk/2010/10/redshift-1-6-released/)
+  <blockquote>
+  [redshift] <br>
+  location-provider=manual <br>
+  [manual] <br>
+  lat=32.7 <br>
+  lon=-117.2 <br>
+  </blockquote>
+</details>
+
+<details>
+  <summary>Como saber a longitude e latitude?</summary>
+  <p>É possível obter esses dados através da página <a href="https://www.latlong.net/" target="_blank">latlong</a></p>
+</details>
 
 ## Instalação
 Em breve detalhes...
