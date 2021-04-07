@@ -70,7 +70,9 @@ Comportamento de teclas: (Pseudonimos)
 
 ### Possíveis dúvidas
 <details>
-  <summary>Como resolver a falha na inicialização do Redshift?</summary>
+  <summary>
+    <strong>Como resolver a falha na inicialização do Redshift?</strong>
+  </summary>
   <p>Você pode optar pelas configurações manuais através do arquivo <strong>redshift.conf</strong> que deverá ser criado em <code>~/.config/</code> contendo as seguintes informações:</p>
 
   <blockquote>
@@ -83,7 +85,9 @@ Comportamento de teclas: (Pseudonimos)
 </details>
 
 <details>
-  <summary>Como saber a longitude e latitude?</summary>
+  <summary>
+    <strong>Como saber a longitude e latitude?</strong>
+  </summary>
   <p>É possível obter esses dados através da página <a href="https://www.latlong.net/" target="_blank">latlong</a></p>
 </details>
 
