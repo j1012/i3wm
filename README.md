@@ -2,18 +2,7 @@
 
 ## Área de trabalho
 ### Imagem de fundo
-As imagens de fundo podem ser definidas através do diretório **Backgrounds** que deverá estar localizado dentro da pasta **Imagens**. por padrão, qualquer imagem cujo o nome seja equivalente a **default** será considerada como sua imagem de fundo padrão independente de seu formato.
-
-Exemplo:
-> ~/Imagens/Backgrounds/01/wallpaper1.svg <br>
-> ~/Imagens/Backgrounds/02/wallpaper2.svg
-
-Através do comando ln é possível criar um atalho referente a imagem de fundo desejada.
-> ln -s ./02/wallpaper2.svg
-
-Considerando que você esteja no diretório **Backgrounds** e executou o comando acima, para atualizar a imagem de fundo basta reiniciar as configurações do i3 através da tecla de atalho `Mod+Shift+R`
-
-O plugin de imagem de fundo tem suporte para os formatos mais comuns, como: **png**, **jpeg** e **svg**.
+Em breve detalhes...
 
 ## Teclas de atalho
 Considere que a tecla **Mod** faz referencia a tecla SUPER que por sua vez também é representada pela tecla Windows e a tecla **Mod1** faz referencia a **Alt**.
@@ -25,12 +14,9 @@ Considere que a tecla **Mod** faz referencia a tecla SUPER que por sua vez tamb�
 ### Windows
 - `Mod+Q` Finaliza a janela em foco.
 - `Mod+F` Habilita/Desativa o modo tela cheia.
-- `Mod+(1~8)` Alterna entre ás áreas de trabalho.
+- `Mod+(1~8)` Cria uma áreas de trabalho na posição informada.
 - `Mod+Shift+(Up/Left/Right/Down)` Altera a orientação e/ou posição da janela em foco.
-- `Mod+Up` Foca a janela superior.
-- `Mod+Left` Foca a janela esquerda.
-- `Mod+Right` Foca a janela direita.
-- `Mod+Down` Foca a janela inferior.
+- `Mod+(Up/Left/Right/Down)` Altera o foco de janela para a direção informada. "Cima/Esquerda/Direita/Baixo"
 - `Mod+Crtl+(Left/Right)` Navegação entre as áreas de trabalho. "Esquerda/Direita"
 
 ### Layout
@@ -58,4 +44,4 @@ Considere que a tecla **Mod** faz referencia a tecla SUPER que por sua vez tamb�
 - Simplescreenrecorder por padrão é direcionado a área de trabalho 8.
 
 ## Instalação
-Em breve...
+Em breve detalhes...
