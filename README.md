@@ -49,18 +49,34 @@ Comportamento de teclas: (Pseudonimos)
 ## Dependencias
 > Redshift: <br>
 > `sudo pacman -S redshift geoclue pyxdg` <br>
+
 > Gerenciador de Bateria: <br>
 > `sudo pacman -S xfce4-power-manager` <br>
+
 > Gerenciador de conexões de rede: <br>
 > `sudo pacman -S nm-applet` <br>
+
 > Notificações de atualização: <br>
 > `sudo pacman -S pacman-tray` <br>
+
 > Provedor do bloqueio de tela: <br>
 > `sudo pacman -S xautolock` <br>
+
 > Provedor de Imagem de fundo: <br>
 > `sudo pacman -S feh` <br>
+
 > Provedor de menu: <br>
 > `sudo pacman -S rofi` <br>
+
+### Correção: Falha na inicialização do Redshift
+Você pode optar pelas configurações manuais através do arquivo **redshift.conf** que deverá ser criado em `~/.config/` contendo as seguintes informações:
+> [redshift] <br>
+> location-provider=manual <br>
+> [manual] <br>
+> lat=32.7 <br>
+> lon=-117.2 <br>
+
+Para mais informações, acesse esse [link](http://jonls.dk/2010/10/redshift-1-6-released/)
 
 ## Instalação
 Em breve detalhes...
