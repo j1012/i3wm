@@ -21,3 +21,10 @@
 - Mod+Shift+R (Recarrega a sessão e as configurações)
 - Mod+L (Bloqueio de sessão)
 - Mod+Shift+H (Documentação)
+
+### Sistema
+- Print (Print em tela cheia.)
+- Shift+Print (Print em tela cheia após 3 segundos.)
+- Ctrl+Print (Print em tela cheia com opção de recorte.)
+- Volume (+/-) (Aumenta ou Diminui o volume. "10 em 10")
+- Volume (x) (Mute)
