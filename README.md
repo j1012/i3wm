@@ -1,5 +1,8 @@
 # Documentação
+
+
 ## Teclas de atalho
+Considere que a tecla **Mod** faz referencia a tecla SUPER que por sua vez também é representada pela tecla Windows e a tecla **Mod1** faz referencia a **Alt**.
 
 ### Aplicativos
 - Mod+Enter (Terminal)
@@ -22,6 +25,7 @@
 ### I3
 - Mod+Shift+R (Recarrega a sessão e as configurações)
 - Mod+L (Bloqueio de sessão)
+- Mod1+F2 (Executa o dmenu)
 - Mod+Shift+H (Documentação)
 
 ### Sistema
