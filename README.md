@@ -1,4 +1,5 @@
 # Documentação
+Em processo de construção...
 
 ## Área de trabalho
 ### Imagem de fundo
