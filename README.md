@@ -5,7 +5,9 @@
 Em breve detalhes...
 
 ## Teclas de atalho
-Considere que a tecla **Mod** faz referencia a tecla SUPER que por sua vez também é representada pela tecla Windows e a tecla **Mod1** faz referencia a **Alt**.
+Comportamento de teclas: (Pseudonimos)
+- O **Mod** é referente a tecla **SUPER** ou **Windows** de seu teclado.
+- O **Mod1** é referente a tecla **Alt** de seu teclado.
 
 ### Aplicativos
 - Mod+Enter (Terminal)
@@ -14,7 +16,7 @@ Considere que a tecla **Mod** faz referencia a tecla SUPER que por sua vez tamb�
 ### Windows
 - `Mod+Q` Finaliza a janela em foco.
 - `Mod+F` Habilita/Desativa o modo tela cheia.
-- `Mod+(1~8)` Cria uma áreas de trabalho na posição informada.
+- `Mod+(1~8)` Cria uma área de trabalho na posição informada.
 - `Mod+Shift+(Up/Left/Right/Down)` Altera a orientação e/ou posição da janela em foco.
 - `Mod+(Up/Left/Right/Down)` Altera o foco de janela para a direção informada. "Cima/Esquerda/Direita/Baixo"
 - `Mod+Crtl+(Left/Right)` Navegação entre as áreas de trabalho. "Esquerda/Direita"
