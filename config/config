@@ -38,32 +38,30 @@ set $mod Mod4
 bindsym $mod+Return exec terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
-# reload i3
-bindsym $mod+Shift+c reload
+# reload/restart i3
+bindsym $mod+Shift+r exec --no-startup-id i3 reload && i3 restart
 
-# close i3
-bindsym $mod+Shift+r restart
 
 # enable/disable mode fullscreen.
 bindsym $mod+f fullscreen toggle
 
 # start app launcher
-#bindsym $mod+d exec --no-startup-id dmenu_recency
-bindsym $mod+d exec --no-startup-id rofi -show drun  -show-icons
+bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
+bindsym Menu exec --no-startup-id rofi -show drun -show-icons
+bindsym Mod1+F2 exec --no-startup-id dmenu_recency
 
 # browser
-bindsym $mod+F1 exec firefox
+#bindsym $mod+F1 exec firefox
 
 # file manager
-bindsym $mod+F2 exec pcmanfm
+#bindsym $mod+F2 exec pcmanfm
 
 # file viewer
-bindsym $mod+F3 exec terminal -e 'ranger'
+#bindsym $mod+F3 exec terminal -e 'ranger'
 
 # printscreen (fullscreen/crop)
-# take a full-screen
 bindsym Print exec --no-startup-id i3-scrot --desk
 bindsym Shift+Print exec --no-startup-id sleep 3s && i3-scrot --desk
 bindsym Ctrl+Print --release exec --no-startup-id i3-scrot --select
@@ -84,9 +82,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+Shift+Down move down
 
 # change orientation
-bindsym $mod+h split h
-bindsym $mod+v split v
-#bindsym $mod+q split toggle
+bindsym $mod+w split toggle
 
 # navigation workspaces (next/previous)
 bindsym $mod+Ctrl+Left workspace prev,
@@ -113,7 +109,12 @@ bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
 
 # look screen
-bindsym $mod+9 exec --no-startup-id blurlock
+bindsym $mod+l exec --no-startup-id blurlock
+
+# volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 '-10%'
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 '+10%'
+bindsym XF86AudioMute exec pactl set-sink-volume 0 0
 
 
 # APPLICATIONS (CONFIG)
@@ -142,10 +143,6 @@ exec_always --no-startup-id feh --conversion-timeout 1 --bg-fill ~/Imagens/Backg
 
 # gnome authentication
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-
-# manjaro welcome
-#exec --no-startup-id manjaro-hello
-#exec --no-startup-id start_conky_maia
 
 # power manager
 exec --no-startup-id xfce4-power-manager
