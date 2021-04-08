@@ -36,7 +36,7 @@ Comportamento de teclas: (Pseudonimos)
 - `Mod+F` Inicia ou Finaliza o modo de tela cheia.
 - `Mod+(1~8)` Cria uma área de trabalho na posição informada.
 - `Mod+Shift+(Cima/Baixo/Direita/Esquerda)` Altera a orientação e/ou posição da janela em foco.
-- `Mod+(Cima/Baixo/Direita/Esquerda)` Altera o foco de janela para a direção informada. "Cima/Esquerda/Direita/Baixo"
+- `Mod+(Cima/Baixo/Direita/Esquerda)` Altera o foco de janela para a direção informada.
 - `Mod+Crtl+(Direita/Esquerda)` Navegação entre as áreas de trabalho. "Esquerda/Direita"
 - `Mod+W` Alterna a orientação de criação de janelas. "Horizontal/Vertical"
 - `Mod+R` Ativa o modo de redimencionamento de janelas. use as setas para o controle de direção: `(Cima/Baixo/Direita/Esquerda)`
