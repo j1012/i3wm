@@ -1,4 +1,7 @@
 # Documentação
+
+![Image](./demo.png?raw=true)
+
 Em processo de construção...
 
 ## Área de trabalho
@@ -67,6 +70,9 @@ Comportamento de teclas: (Pseudonimos)
 
 > Provedor de menu: <br>
 > `sudo pacman -S rofi` <br>
+
+> Provedor de menu wifi: <br>
+> `sudo pacman -S networkmanager_bmenu`
 
 ### Possíveis dúvidas
 <details>
