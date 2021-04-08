@@ -1,12 +1,21 @@
-# Documentação
-
 ![Image](./demo.png?raw=true)
-
-Em processo de construção...
 
 ## Área de trabalho
 ### Imagem de fundo
-Em breve detalhes...
+Estrutura de pastas:
+<blockquote>
+  <p>├──Desktop</p>
+  <p>├──Documents</p>
+  <p>├──Downloads</p>
+  <p>├──Music</p>
+  <p>├──Pictures</p>
+  <p>├────backgrounds</p>
+  <p>├──────01</p>
+  <p>├────────wallhaven-k7x3zq.png</p>
+  <p>├──────02</p>
+  <p>├──────03</p>
+  <p>├──Videos</p>
+</blockquote>
 
 ## Teclas de atalho
 Comportamento de teclas: (Pseudonimos)
