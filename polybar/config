@@ -1,72 +1,62 @@
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 2
+margin-bottom = 2
+
 [colors]
-background = #222
-background-alt = #444
-foreground = #dfdfdf
+background = #f0232635
+background-alt = #576075
+foreground = #A6Accd
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
-linebottom = #73d216
+underline-1 = #c792ea
+underline-2 = #FE3044
 
 
 [bar/topbar]
 width = 100%
-height = 25
-radius = 0
-fixed-center = false
-background = #272324
+height = 26
+offset-x = 0
+offset-y = 0
+fixed-center = true
+enable-ipc = true
+
+background = ${colors.background}
 foreground = ${colors.foreground}
+
 line-size = 3
 line-color = #f00
-border-bottom-size = 2
-border-bottom-color = ${colors.linebottom}
-padding-left = 2
-padding-right = 2
-module-margin-left = 2
-module-margin-right = 2
+
+border-bottom-size = 1
+border-color = ${colors.underline1}
+
+padding-left = 6
+padding-right = 6
+
+module-margin = 2
 
 font-0 = fixed:pixelsize=11;1
-font-1 = "icomoon\-feather:size=10;2"
-font-2 = "SpaceMono:size=12;1"
-font-3 = SpaceMono:style:regular:pixelsize=10;1
-font-4 = icomoon:pixelsize=13;2"
-font-5 = SymbolsNerdFont:style:1000-em:pixelsize=11;1
-font-6 = FontAwesome:style:regular:pixelsize=10;2
+font-1 = "icomoon:size=12;0"
 
 modules-left = menu i3
 modules-center = xwindow
-modules-right = pulseaudio date powermenu
-tray-position = right
+modules-right = cpu temperature pulseaudio wlan date powermenu
+
+tray-position = none
 tray-padding = 2
+tray-maxsize = 16
+
 cursor-click = pointer
 cursor-scroll = ns-resize
 
 
 [module/xwindow]
 type = internal/xwindow
-label =   %title:0:30:...%
-
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
-label-layout = %layout%
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
-
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-mount-0 = /
-label-mounted =  %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
-
+label =   %title:0:30:...%
 
 [module/bspwm]
 type = internal/bspwm
@@ -83,7 +73,6 @@ label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
-
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
@@ -94,7 +83,8 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 label-focused = %index%
 label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
+label-focused-underline = ${colors.underline-2}
+#label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 label-unfocused = %index%
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
@@ -107,91 +97,12 @@ label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 
-[module/mpd]
-type = internal/mpd
-interval = 2
-format-online =  <label-song>  <icon-prev> <toggle> <icon-next>
-label-song =  "%artist% - %title%"
-label-song-maxlen = 25
-label-song-ellipsis = true
-label-offline = "MPD is offline"
-icon-play = 
-icon-pause = 
-icon-stop = 
-icon-prev = 
-icon-next = 
-icon-seekb = ⏪
-icon-seekf = ⏩
-icon-random = 🔀
-icon-repeat = 🔁
-icon-repeatone = 🔂
-icon-single = 🔂
-icon-consume = ✀
-
-
-[module/xbacklight]
-type = internal/xbacklight
-format = <label> <bar>
-label = BL
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
-
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
-
-
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "  "
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
 label = %percentage:2%%
-
-
-[module/memory]
-type = internal/memory
-interval = 2
-format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
-label = %percentage_used%%
-
-
-[module/wlan]
-type = internal/network
-interface = wlp2s0
-interval = 3.0
-format-connected = <ramp-signal> 
-label-connected = %essid%
-label-disconnected =  
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground}
-
-
-[module/eth]
-type = internal/network
-interface = sit0
-interval = 3.0
-format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-format-disconnected =
-
 
 [module/date]
 type = internal/date
@@ -200,7 +111,7 @@ date =
 date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
-format-prefix =  
+format-prefix = 
 format-prefix-foreground = ${colors.foreground}
 label = %date% %time%
 
@@ -209,80 +120,26 @@ label = %date% %time%
 type = internal/pulseaudio
 sink = alsa_output.pci-0000_12_00.3.analog-stereo
 use-ui-max = true
-interval = 5
-format-volume = <ramp-volume> <label-volume>
-label-muted =  Muted
+interval = 10
+format-volume = <ramp-volume>  <label-volume>
+label-muted =  Muted
 label-muted-foreground = #666
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
-ramp-volume-4 = 
-
-
-[module/alsa]
-type = internal/alsa
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
-label-volume-foreground = ${root.foreground}
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
-
-
-[module/battery]
-type = internal/battery
-full-at = 99
-battery = BAT1
-adapter = ACAD
-poll-interval = 2
-time-format = %H:%M
-format-charging = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
-label-charging = %percentage%%
-label-discharging = %percentage%%
-label-full = Fully Charged
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-ramp-capacity-5 = 
-ramp-capacity-6 = 
-ramp-capacity-7 = 
-ramp-capacity-8 = 
-ramp-capacity-9 = 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-5 = 
-animation-charging-6 = 
-animation-charging-7 = 
-animation-charging-8 = 
-animation-charging-framerate = 750
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-volume-4 = 
+ramp-volume-5 = 
+ramp-volume-6 = 
+ramp-volume-7 = 
+ramp-volume-8 = 
+ramp-volume-9 = 
+ramp-volume-10 = 
 
 
 [module/temperature]
 type = internal/temperature
-interval = 0.5
+interval = 1
 thermal-zone = 0
 warn-temperature = 60
 units = true
@@ -291,42 +148,39 @@ format-warn = <ramp> <label-warn>
 label = %temperature-c%
 label-warn = "%temperature-c%"
 label-warn-foreground = #f00
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
 
 
 [module/powermenu]
 type = custom/menu
-expand-right = true
+expand-right = false
 format-spacing = 1
-label-open = 
+label-open = 
 label-open-foreground = ${colors.foreground}
-label-close = 
+label-close = 
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
-menu-0-0 =  
-menu-0-0-exec = reboot
-menu-0-1 =  
-menu-0-1-exec = poweroff
-menu-0-2 = 
-menu-0-2-exec = i3-msg exit
-
-
-[settings]
-screenchange-reload = true
-
-
-[global/wm]
-margin-top = 2
-margin-bottom = 2
-
+menu-0-0 =  Logout
+menu-0-0-exec = i3-msg 'exit'
+menu-0-1 =  Look Screen
+menu-0-1-exec = blurlock
+menu-0-2 =  Reboot
+menu-0-2-exec = reboot
+menu-0-3 =  Poweroff
+menu-0-3-exec = poweroff
 
 [module/menu]
 type = custom/script
-exec = /usr/local/share/polybar/scripts/menu.sh
-click-left = /usr/local/share/polybar/scripts/launcher.sh &
-format-spacing = 1 
+exec = ~/.polybar/scripts/menu.sh
+click-left = ~/.polybar/scripts/launcher.sh &
+format-spacing = 2
+
+[module/wlan]
+type = custom/script
+exec = ~/.polybar/scripts/wifimenu.sh
+click-left = ~/.polybar/scripts/wifi.sh &
