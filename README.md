@@ -30,6 +30,7 @@ Comportamento de teclas: (Pseudonimos)
 
 ### I3
 - `Mod+Shift+R` Recarrega a sessão e as configurações.
+- `Mod+Shift+E` Finaliza a sessão.
 - `Mod+L` Bloqueio de sessão.
 - `Mod1+F2` Executa o dmenu.
 - `Mod+Shift+H` Documentação.
