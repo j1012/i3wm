@@ -43,6 +43,9 @@ bindsym $mod+q kill
 # reload/restart i3
 bindsym $mod+Shift+r exec --no-startup-id i3 reload && i3 restart
 
+# quit session
+bindsym $mod+Shift+e exit
+
 
 # enable/disable mode fullscreen.
 bindsym $mod+f fullscreen toggle
@@ -123,8 +126,9 @@ assign [class=SimpleScreenRecorder] $ws8
 
 
 # open specific application in floating mode (class/title)
-for_window [class=Manjaro-hello] floating enable
-for_window [class=SimpleScreenRecorder] floating enable
+for_window [class="Manjaro-hello"] floating enable
+for_window [class="SimpleScreenRecorder"] floating enable
+#for_window [class="pcmanfm" title="Save*"] resize set 640 480
 
 # workspace names
 set $ws1 1
@@ -139,7 +143,7 @@ set $ws8 8
 
 # APPLICATIONS (INITIALIZATION)
 # wallpaper provider
-exec_always --no-startup-id feh --conversion-timeout 1 --bg-fill ~/Imagens/Backgrounds/default.*
+exec_always --no-startup-id feh --conversion-timeout 1 --bg-fill ~/Pictures/backgrounds/default.*
 
 # gnome authentication
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -161,4 +165,5 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix-xcursor
 
 # polybar
-exec_always --no-startup-id /usr/local/share/polybar/launch.sh
+exec_always --no-startup-id ~/.polybar/launch.sh
+#exec_always --no-startup-id ~/.config/polybar/launch.sh --shapes
