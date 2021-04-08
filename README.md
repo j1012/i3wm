@@ -26,6 +26,10 @@ Comportamento de teclas: (Pseudonimos)
 ### Aplicativos
 - `Mod+Enter` Terminal
 - `Mod+D` ou `Menu` Rofi
+- `Mod+F1` Navegador web Firefox
+- `Mod+F2` Gerenciador de aquivos pcmanfm
+- `Mod+F3` Visualizador de arquivos (ranger)
+- `Mod+F4` Reprodutor de músicas (cmus)
 
 ### Windows
 - `Mod+Q` Finaliza a janela em foco.
@@ -84,6 +88,9 @@ Comportamento de teclas: (Pseudonimos)
 
 > Provedor de menu wifi: <br>
 > `sudo pacman -S networkmanager_bmenu`
+
+> Aplicativos: <br>
+> sudo pacman -S ranger cmus firefox pcmanfm
 
 ### Possíveis dúvidas
 <details>
