@@ -2,20 +2,21 @@
 
 ## Área de trabalho
 ### Imagem de fundo
-Estrutura de pastas:
-<blockquote>
-  <p>├──Desktop</p>
-  <p>├──Documents</p>
-  <p>├──Downloads</p>
-  <p>├──Music</p>
-  <p>├──Pictures</p>
-  <p>├────backgrounds</p>
-  <p>├──────01</p>
-  <p>├────────wallhaven-k7x3zq.png</p>
-  <p>├──────02</p>
-  <p>├──────03</p>
-  <p>├──Videos</p>
-</blockquote>
+Em construção...
+```
+├── Desktop
+├── Documents
+├── Downloads
+├── Music
+├── Pictures
+├──── backgrounds
+├────── 01
+├──────── wallhaven-k7x3zq.png
+├────── 02
+├────── 03
+├────── default.png
+├── Videos
+```
 
 ## Teclas de atalho
 Comportamento de teclas: (Pseudonimos)
