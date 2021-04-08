@@ -90,7 +90,7 @@ Comportamento de teclas: (Pseudonimos)
 > `sudo pacman -S networkmanager_bmenu`
 
 > Aplicativos: <br>
-> sudo pacman -S ranger cmus firefox pcmanfm
+> `sudo pacman -S ranger cmus firefox pcmanfm`
 
 ### Possíveis dúvidas
 <details>
