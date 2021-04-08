@@ -38,9 +38,8 @@ Comportamento de teclas: (Pseudonimos)
 - `Mod+Shift+(Up/Left/Right/Down)` Altera a orientação e/ou posição da janela em foco.
 - `Mod+(Up/Left/Right/Down)` Altera o foco de janela para a direção informada. "Cima/Esquerda/Direita/Baixo"
 - `Mod+Crtl+(Left/Right)` Navegação entre as áreas de trabalho. "Esquerda/Direita"
-
-### Layout
 - `Mod+W` Alterna a orientação de criação de janelas. "Horizontal/Vertical"
+- `Mod+R` Ativa o modo de redimencionamento de janelas. use as setas para o controle de direção: `(Up/Left/Right/Down)`
 
 ### I3
 - `Mod+Shift+R` Recarrega a sessão e as configurações.
