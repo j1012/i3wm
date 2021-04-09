@@ -2,7 +2,7 @@
 
 ## Área de trabalho
 ### Imagem de fundo
-Em construção...
+O sistema de imagem de fundo funciona de maneira estatica. ou seja, o usuário deverá apontar o caminho da imagem em um dirétorio especifico através do comando "**ln**".
 ```
 ├── Desktop
 ├── Documents
@@ -17,6 +17,13 @@ Em construção...
 ├────── default.png
 ├── Videos
 ```
+Observando a estrutura de pastas acima, podemos notar que: temos duas imagens representadas em diretórios diferentes. "backgrounds/**default.png**" é o local estatico para ser usado como referencia a outras imagens.
+
+Através do comando adiante, poderemos fazer uma referencia para o wallpaper abordado no exemplo acima.
+
+> ln -S ./01/wallhaven-k7x3zq.png ./defaul.png
+
+Os formatos suportados são: **jpg, png** e também **svg**. uma vez que a extensão do wallpaper seja jpg, a extensão de referencia também deverá seguir o mesmo padrão.
 
 ## Teclas de atalho
 Comportamento de teclas: (Pseudonimos)
