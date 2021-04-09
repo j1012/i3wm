@@ -44,8 +44,7 @@ bindsym $mod+q kill
 bindsym $mod+Shift+r exec --no-startup-id i3 reload && i3 restart
 
 # quit session
-bindsym $mod+Shift+e exit
-
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the shortcut to exit. Do you really want to exit i3?' -b 'Yes, exit i3' 'exit'"
 
 # enable/disable mode fullscreen.
 bindsym $mod+f fullscreen toggle
@@ -64,6 +63,9 @@ bindsym Mod1+F2 exec --no-startup-id dmenu_recency
 # file viewer
 #bindsym $mod+F3 exec terminal -e 'ranger'
 
+# music player
+bindsym $mod+F4 exec terminal -e 'cmus'
+
 # printscreen (fullscreen/crop)
 bindsym Print exec --no-startup-id i3-scrot --desk
 bindsym Shift+Print exec --no-startup-id sleep 3s && i3-scrot --desk
@@ -77,6 +79,26 @@ bindsym $mod+Up focus up
 bindsym $mod+Left focus left
 bindsym $mod+Right focus Right
 bindsym $mod+Down focus down
+
+# resize window
+mode "resize" {
+#bindsym Up resize shrink height 10 px or 10 ppt
+#bindsym Down resize grow height 10 px or 10 ppt
+#bindsym Left resize grow width 10 px or 10 ppt
+#bindsym Right resize shrink width 10 px or 10 ppt
+
+bindsym Up 	resize grow height 10px or 10ppt
+bindsym Down 	resize shrink height 10px or 10ppt
+bindsym Left 	resize grow width 10px or 10ppt
+bindsym Right 	resize shrink width 10px or 10ppt
+
+# back to normal: Enter or Escape
+bindsym Return mode "default"
+bindsym Escape mode "default"
+}
+
+# Enter resize mode
+bindsym $mod+r mode "resize"
 
 # move focused window
 bindsym $mod+Shift+Up move up
@@ -102,14 +124,14 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 
 # move focused window to workspace
-bindsym $mod+Ctrl+1 move container to workspace $ws1
-bindsym $mod+Ctrl+2 move container to workspace $ws2
-bindsym $mod+Ctrl+3 move container to workspace $ws3
-bindsym $mod+Ctrl+4 move container to workspace $ws4
-bindsym $mod+Ctrl+5 move container to workspace $ws5
-bindsym $mod+Ctrl+6 move container to workspace $ws6
-bindsym $mod+Ctrl+7 move container to workspace $ws7
-bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+1 move container to workspace $ws1, workspace $ws1
+bindsym $mod+Ctrl+2 move container to workspace $ws2, workspace $ws2
+bindsym $mod+Ctrl+3 move container to workspace $ws3, workspace $ws3
+bindsym $mod+Ctrl+4 move container to workspace $ws4, workspace $ws4
+bindsym $mod+Ctrl+5 move container to workspace $ws5, workspace $ws5
+bindsym $mod+Ctrl+6 move container to workspace $ws6, workspace $ws6
+bindsym $mod+Ctrl+7 move container to workspace $ws7, workspace $ws7
+bindsym $mod+Ctrl+8 move container to workspace $ws8, workspace $ws8
 
 # look screen
 bindsym $mod+l exec --no-startup-id blurlock
@@ -122,13 +144,12 @@ bindsym XF86AudioMute exec pactl set-sink-volume 0 0
 
 # APPLICATIONS (CONFIG)
 # open file manager only in workspace 1 (class/title)
-assign [class=SimpleScreenRecorder] $ws8
+#assign [class=SimpleScreenRecorder] $ws8
 
 
 # open specific application in floating mode (class/title)
 for_window [class="Manjaro-hello"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable
-#for_window [class="pcmanfm" title="Save*"] resize set 640 480
 
 # workspace names
 set $ws1 1
@@ -152,10 +173,10 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xfce4-power-manager
 
 # app store
-exec --no-startup-id pamac-tray
+#exec --no-startup-id pamac-tray
 
 # network manager
-exec_always --no-startup-id nm-applet
+#exec_always --no-startup-id nm-applet
 
 # enable automatic screen look
 exec --no-startup-id xautolock -time 10 -locker blurlock
@@ -166,4 +187,3 @@ exec_always --no-startup-id fix-xcursor
 
 # polybar
 exec_always --no-startup-id ~/.polybar/launch.sh
-#exec_always --no-startup-id ~/.config/polybar/launch.sh --shapes
