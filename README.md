@@ -23,7 +23,7 @@ Comportamento de teclas: (Pseudonimos)
 - O **Mod** é referente a tecla **SUPER** ou **Windows** de seu teclado.
 - O **Mod1** é referente a tecla **Alt** de seu teclado.
 
-### Aplicativos
+### Aplicativo
 - `Mod+Enter` Terminal
 - `Mod+D` ou `Menu` Rofi
 - `Mod+F1` Navegador web Firefox
@@ -31,7 +31,7 @@ Comportamento de teclas: (Pseudonimos)
 - `Mod+F3` Visualizador de arquivos (ranger)
 - `Mod+F4` Reprodutor de músicas (cmus)
 
-### Windows
+### Janela
 - `Mod+Q` Finaliza a janela em foco.
 - `Mod+F` Inicia ou Finaliza o modo de tela cheia.
 - `Mod+(1~8)` Cria uma área de trabalho na posição informada.
@@ -56,19 +56,19 @@ Comportamento de teclas: (Pseudonimos)
 - `Volume (x)` Mute.
 
 ## Regras
-### Windows
+### Janela
 - Simplescreenrecorder abre em modo flutuante.
 - Manjaro-Hello abre em modo flutuante.
 
 ## Dependencias
 
-| Descrição | Pacote |
------------------ | -------------- |
-Provedor de imagem de fundo | `feh`
-Provedor de bloqueio de tela | `xautolock`
-Gerenciador de energia | `xfce4-power-manager`
-Provedores de menu | `rofi`, `networkmanager_bmenu`
-Aplicações | `firefox`, `pcmanfm`, `cmus`, `ranger`
+| Descrição | Pacote | Opcional |
+----------------- | -------------- | -------------- |
+Provedor de imagem de fundo | `feh` | `nitrogen`
+Provedor de bloqueio de tela | `xautolock` |
+Gerenciador de energia | `xfce4-power-manager` |
+Provedores de menu | `rofi`, `networkmanager_bmenu` |
+Aplicações | `firefox`, `pcmanfm`, `cmus`, `ranger` | `redshift`, `geoclue`, `pyxdg`, `nm-applet`
 
 ## Problemas reconhecidos
 Após o usuário ativar o modo de redimencionamento "**resize**", caso o mesmo ative a função com a janela em foco em seu lado esquerdo; a função de redimencionamento funciona de modo invertido. ou seja, não respeitando as configurações aplicada.
