@@ -25,7 +25,7 @@ Através do comando adiante, poderemos fazer uma referencia para o wallpaper abo
 ln -S ./01/wallhaven-k7x3zq.png ./defaul.png
 ```
 
-Os formatos suportados são: **jpg, png** e também **svg**. uma vez que a extensão do wallpaper seja jpg, a extensão de referencia também deverá seguir o mesmo padrão.
+Os formatos suportados são: **jpg, png** e também **svg**. uma vez que a extensão do wallpaper seja jpg, a extensão do arquivo de referencia também deverá seguir o mesmo padrão.
 
 ## Teclas de atalho
 Comportamento de teclas: (Pseudonimos)
