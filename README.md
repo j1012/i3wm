@@ -60,59 +60,15 @@ Comportamento de teclas: (Pseudonimos)
 - Simplescreenrecorder abre em modo flutuante.
 - Manjaro-Hello abre em modo flutuante.
 
-### Área de trabalho
-- Simplescreenrecorder por padrão é direcionado a área de trabalho 8.
-
 ## Dependencias
-> Redshift: <br>
-> `sudo pacman -S redshift geoclue pyxdg` <br>
 
-> Gerenciador de Bateria: <br>
-> `sudo pacman -S xfce4-power-manager` <br>
+| Descrição | Pacote |
+----------------- | -------------- |
+Provedor de imagem de fundo | `feh`
+Provedor de bloqueio de tela | `xautolock`
+Gerenciador de energia | `xfce4-power-manager`
+Provedores de menu | `rofi`, `networkmanager_bmenu`
+Aplicações | `firefox`, `pcmanfm`, `cmus`, `ranger`
 
-> Gerenciador de conexões de rede: <br>
-> `sudo pacman -S nm-applet` <br>
-
-> Notificações de atualização: <br>
-> `sudo pacman -S pacman-tray` <br>
-
-> Provedor do bloqueio de tela: <br>
-> `sudo pacman -S xautolock` <br>
-
-> Provedor de Imagem de fundo: <br>
-> `sudo pacman -S feh` <br>
-
-> Provedor de menu: <br>
-> `sudo pacman -S rofi` <br>
-
-> Provedor de menu wifi: <br>
-> `sudo pacman -S networkmanager_bmenu`
-
-> Aplicativos: <br>
-> `sudo pacman -S ranger cmus firefox pcmanfm`
-
-### Possíveis dúvidas
-<details>
-  <summary>
-    <strong>Como resolver a falha na inicialização do Redshift?</strong>
-  </summary>
-  <p>Você pode optar pelas configurações manuais através do arquivo <strong>redshift.conf</strong> que deverá ser criado em <code>~/.config/</code> contendo as seguintes informações:</p>
-
-  <blockquote>
-  [redshift] <br>
-  location-provider=manual <br>
-  [manual] <br>
-  lat=32.7 <br>
-  lon=-117.2 <br>
-  </blockquote>
-</details>
-
-<details>
-  <summary>
-    <strong>Como saber a longitude e latitude?</strong>
-  </summary>
-  <p>É possível obter esses dados através da página <a href="https://www.latlong.net/" target="_blank">latlong</a></p>
-</details>
-
-## Instalação
-Em breve detalhes...
+## Problemas reconhecidos
+Após o usuário ativar o modo de redimencionamento "**resize**", caso o mesmo ative a função com a janela em foco em seu lado esquerdo; a função de redimencionamento funciona de modo invertido. ou seja, não respeitando as configurações aplicada.
