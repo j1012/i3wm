@@ -166,13 +166,13 @@ label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 menu-0-0 =  Logout
-menu-0-0-exec = i3-msg 'exit'
+menu-0-0-exec = "i3-nagbar -t warning -m 'You pressed the shortcut to exit. Do you really want to exit i3?' -b 'Are you sure?' 'exit'"
 menu-0-1 =  Look Screen
-menu-0-1-exec = blurlock
+menu-0-1-exec = "i3-nagbar -t warning -m 'You pressed the shortcut to lock screen. Do you really want to lock your computer screen?' -b 'Are you sure?' 'blurlock'"
 menu-0-2 =  Reboot
-menu-0-2-exec = reboot
+menu-0-2-exec = "i3-nagbar -t warning -m 'You pressed the shortcut to reboot. Do you really want to reboot your computer?' -b 'Are you sure?' 'reboot'"
 menu-0-3 =  Poweroff
-menu-0-3-exec = poweroff
+menu-0-3-exec = "i3-nagbar -t warning -m 'You pressed the shortcut to shutdown. Do you really want to shutdown?' -b 'Are you sure?' 'poweroff'"
 
 [module/menu]
 type = custom/script
