@@ -78,6 +78,3 @@ Provedor de bloqueio de tela | `xautolock` |
 Gerenciador de energia | `xfce4-power-manager` |
 Provedores de menu | `rofi`, `networkmanager_bmenu` |
 Aplicações | `firefox`, `pcmanfm`, `cmus`, `ranger` | `redshift`, `geoclue`, `pyxdg`, `nm-applet`
-
-## Problemas reconhecidos
-Após o usuário ativar o modo de redimencionamento "**resize**", caso o mesmo ative a função com a janela em foco em seu lado esquerdo; a função de redimencionamento funciona de modo invertido. ou seja, não respeitando as configurações aplicada.
